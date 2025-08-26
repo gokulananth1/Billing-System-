@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Bill</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bill-bg">
+  <div class="container bill-container">
+    <div class="bill-header text-center">
+      <h2 >🧾 Invoice</h2>
+      <p><strong>🌟 My Store</strong>
+    </div>
+
+    <div class="bill-details">
+      <p><strong>Customer:</strong> <span id="billCustomer"></span></p>
+      <p><strong>Mobile:</strong> <span id="billMobile"></span></p>
+      <p><strong>Date:</strong> <span id="billDate"></span></p>
+    </div>
+
+    <table class="table table-striped table-bordered bill-table">
+      <thead class="table-primary">
+        <tr><th>Item</th><th>Qty</th><th>Price</th><th>Total</th></tr>
+      </thead>
+      <tbody id="billItems"></tbody>
+    </table>
+
+    <div class="bill-total text-end">
+      <h4 class="text-success">Total: ₹<span id="billTotal"></span></h4>
+    </div>
+
+    <div class="text-center mt-4">
+      <button class="btn btn-primary rounded-pill shadow" onclick="window.print()">🖨 Print Bill</button>
+      <a href="index.html" class="btn btn-secondary rounded-pill shadow">⬅ Back</a>
+    </div>
+  </div>
+
+  <script src="bill.js"></script>
+</body>
+</html>
